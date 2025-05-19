@@ -1,0 +1,57 @@
+[project]
+name = "urchin"
+version = "0.0.29"
+description = "URDF parser and manipulator for Python"
+readme = "README.md"
+authors = [
+    { name = "Adam Fishman", email = "hello@fishbotics.com" },
+]
+license = { text = "MIT License" }
+requires-python = ">=3.6"
+dependencies = [
+    "lxml",
+    "networkx",
+    "numpy",
+    "pillow",
+    "pycollada>=0.6",
+    "pyribbit",
+    "scipy",
+    "six",
+    "sphinx",
+    "sphinx-automodapi",
+    "sphinx-rtd-theme",
+    "trimesh",
+]
+keywords = ["robotics", "ros", "urdf", "robots", "parser"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering",
+]
+
+[dependency-groups]
+dev = [
+    "flake8",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "tox",
+]
+doc = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinx-automodapi",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv.sources]
+pyribbit = { git = "https://github.com/fishbotics/pyribbit.git" }
+
